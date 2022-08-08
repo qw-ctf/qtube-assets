@@ -11,6 +11,7 @@ fetch() {
     fi
 }
 
+QADICT="https://www.quaddicted.com/files"
 QARCH="https://github.com/Jason2Brownlee/QuakeOfficialArchive/raw/main/"
 NQUAKE="https://github.com/nQuake/distfiles/raw/master"
 QWGFX="https://gfx.quakeworld.nu/download"
@@ -69,3 +70,6 @@ fetch "plague.pk3" "http://members.optusnet.com.au/~plaguespak2/downloads/models
 
 # Authentic models by NightFright
 fetch "auth_mdl-r26.zip" "https://github.com/NightFright2k19/quake_authmdl/releases/download/26/auth_mdl-r26.zip"
+
+# Rocket Arena
+fetch "rarena11.zip" "${QADICT}/idgames2/planetquake/servers/arena/rarena11.zip"

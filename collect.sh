@@ -189,6 +189,18 @@ mv pak0/sound/weapons/ax1.wav \
    pak0/sound/weapons/tink1.wav \
    target/sound/weapons/
 
+# Rocket Arena countdown sounds
+mkdir -p ra/pak
+unzip -q -d ra ../dist/rarena11.zip
+unpak -q -d ra/pak ra/PAK0.PAK
+
+mkdir -p target/sound/ra
+mv ra/pak/sound/ra/1.wav \
+   ra/pak/sound/ra/2.wav \
+   ra/pak/sound/ra/3.wav \
+   ra/pak/sound/ra/fight.wav \
+   target/sound/ra
+
 # CTF Assets
 mkdir -p ctf/pak ctf/wad
 
@@ -219,6 +231,11 @@ mv ctf/pak/sound/rune/rune1.wav \
    ctf/pak/sound/rune/rune3.wav \
    ctf/pak/sound/rune/rune4.wav \
    target/sound/rune/
+
+mkdir -p target/sound/misc
+mv ctf/pak/sound/misc/flagtk.wav \
+   ctf/pak/sound/misc/flagcap.wav \
+   target/sound/misc/
 
 for x in ctf/wad/*.png; do
     mv "$x" "$(echo "$x" | tr '[:upper:]' '[:lower:]')"
@@ -644,6 +661,16 @@ mv ezepov-bmodels/pak/textures/bmodels/+0_med100.tga \
 #    target/progs/
 #
 # mv target/progs/vwplayer.mdl target/progs/player.mdl
+
+mkdir -p megasound
+unzip -q -d megasound ../dist/megasound.zip r_item2_wav_us.zip
+unzip -q -d megasound megasound/r_item2_wav_us.zip
+mv megasound/r_item2_us.wav \
+   target/sound/items/r_item2.wav
+
+
+# FTE Quake Manifest
+cp ../bundled/default.fmf target/
 
 
 mkdir -p font
