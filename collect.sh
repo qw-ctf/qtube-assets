@@ -687,12 +687,12 @@ convert font/graybugs/quake/qw/textures/charsets/graybugs.png\
 while read image; do
     convert -auto-orient "${image}" "${image/tga/png}"
     rm "${image}"
-done< <(find target/textures -name '*.tga')
+done< <(find target -name '*.tga')
 
 while read image; do
     pngquant --speed 1 --map "${image}" "${image}"
     mv "${image/.png/-fs8.png}" "${image}"
-done< <(find target/textures -name '*.png')
+done< <(find target -name '*.png')
 
 cd target
 
