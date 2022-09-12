@@ -285,6 +285,7 @@ cp ../bundled/particles/teleport.cfg \
    ../bundled/particles/bubble-trail.cfg \
    ../bundled/particles/grenade.cfg \
    ../bundled/particles/explosion.cfg \
+   ../bundled/particles/particlefont.tga \
    target/particles/
 
 mkdir -p target/skins
