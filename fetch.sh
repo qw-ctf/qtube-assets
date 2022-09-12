@@ -23,10 +23,10 @@ fetch "pak0.pak" "${NQUAKE}/qsw106/ID1/PAK0.PAK"
 fetch "3wctf301.zip" "${QARCH}/bin/3wctf301.zip"
 fetch "3wctfc40.zip" "${QARCH}/bin/3wctfc40.zip"
 
-# Runes
-fetch "end2.mdl" "${NQUAKE}/sv-non-gpl/id1/progs/end2.mdl"
-fetch "end3.mdl" "${NQUAKE}/sv-non-gpl/id1/progs/end3.mdl"
-fetch "end4.mdl" "${NQUAKE}/sv-non-gpl/id1/progs/end4.mdl"
+# ID1 Runes
+# fetch "end2.mdl" "${NQUAKE}/sv-non-gpl/id1/progs/end2.mdl"
+# fetch "end3.mdl" "${NQUAKE}/sv-non-gpl/id1/progs/end3.mdl"
+# fetch "end4.mdl" "${NQUAKE}/sv-non-gpl/id1/progs/end4.mdl"
 
 # Michal Sochon / _KaszpiR_
 fetch "graybugs.zip" "${QWGFX}/320/gray-bugs/"
@@ -48,6 +48,7 @@ fetch "faithful-mdl-dbg.zip" "${QWGFX}/39/debug-3d-models-faithfull-/"
 fetch "ammo-count-icons.zip" "${QWGFX}/121/ammo-count-icons-alternative-/"
 fetch "primevil-axe.zip" "${QWGFX}/48/vaxe-alternative-/"
 fetch "primevil-bolt.zip" "${QWGFX}/89/bolt2-remix-2-/"
+# fetch "primevil-skins.zip" "${QWGFX}/3/primevil-24bit-skins/"
 
 # Backpack by unknown
 fetch "backpack.zip" "${QWGFX}/14/backpack-texture/"
