@@ -287,7 +287,10 @@ cp ../bundled/particles/teleport.cfg \
    ../bundled/particles/explosion.cfg \
    target/particles/
 
-
+mkdir -p target/skins
+cp ../bundled/skins/blue.png \
+   ../bundled/skins/red.png \
+   target/skins/
 
 # r_tracker icons
 
