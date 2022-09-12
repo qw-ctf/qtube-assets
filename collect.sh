@@ -668,11 +668,6 @@ unzip -q -d megasound megasound/r_item2_wav_us.zip
 mv megasound/r_item2_us.wav \
    target/sound/items/r_item2.wav
 
-
-# FTE Quake Manifest
-cp ../bundled/default.fmf target/
-
-
 mkdir -p font
 unzip -q -d font ../dist/graybugs.zip
 
