@@ -241,10 +241,10 @@ for x in ctf/wad/*.png; do
     mv "$x" "$(echo "$x" | tr '[:upper:]' '[:lower:]')"
 done
 
-mkdir -p target/textures/wad
+mkdir -p target/gfx
 mv ctf/wad/sba*_key*.png \
    ctf/wad/sb_key*.png \
-   target/textures/wad/
+   target/gfx/
 
 mkdir -p target/textures/models
 cp ../bundled/textures/models/end1.mdl_0.png \
@@ -255,12 +255,12 @@ cp ../bundled/textures/models/end1.mdl_0.png \
    ../bundled/textures/models/flag.mdl_1.png \
    target/textures/models/
 
-mkdir -p target/textures/wad
+mkdir -p target/gfx
 cp ../bundled/textures/wad/sb_sigil1.png \
    ../bundled/textures/wad/sb_sigil2.png \
    ../bundled/textures/wad/sb_sigil3.png \
    ../bundled/textures/wad/sb_sigil4.png \
-   target/textures/wad/
+   target/gfx/
 
 cp ../bundled/textures/#lava1.png \
    ../bundled/textures/#lava1_luma.png \
@@ -384,16 +384,16 @@ cp plague/textures/missile.tga \
    plague/textures/missile_glow.tga \
    plague/textures/grenade.tga \
    plague/textures/grenade_glow.tga \
-   target/textures
+   target/textures/
 
 mv plague/progs/missile.md3 \
    plague/progs/missile_0.skin \
    plague/progs/grenade.md3 \
    plague/progs/grenade_0.skin \
-   target/progs
+   target/progs/
 
-sed -i 's/tga/png/' target/progs/missile_0.skin
-sed -i 's/tga/png/' target/progs/grenade_0.skin
+gsed -i 's/tga/png/' target/progs/missile_0.skin
+gsed -i 's/tga/png/' target/progs/grenade_0.skin
 
 mkdir -p target/scripts
 cp plague/scripts/shell.shader \
@@ -401,9 +401,9 @@ cp plague/scripts/shell.shader \
 
 mkdir -p target/textures/sfx
 cp plague/textures/sfx/quad.tga \
-   target/textures/sfx
+   target/textures/sfx/
 
-sed -i 's/tga/png/' target/scripts/shell.shader
+gsed -i 's/tga/png/' target/scripts/shell.shader
 
 
 #mv target/progs/v_spike.mdl target/progs/v_star.mdl
@@ -412,7 +412,7 @@ mkdir -p hud/wad
 7z x -bso0 -bse0 -bsp0 -ohud ../dist/dithes-hud.7z
 unzip -q -d hud/wad hud/d.hud_128/d.hud.pk3
 
-mkdir -p target/textures/wad
+mkdir -p target/gfx
 mv hud/wad/textures/wad/anum_0.tga \
    hud/wad/textures/wad/anum_1.tga \
    hud/wad/textures/wad/anum_2.tga \
@@ -437,11 +437,11 @@ mv hud/wad/textures/wad/anum_0.tga \
    hud/wad/textures/wad/num_9.tga \
    hud/wad/textures/wad/num_colon.tga \
    hud/wad/textures/wad/num_minus.tga \
-   target/textures/wad/
+   target/gfx/
 
 mkdir -p target/gfx
 mv hud/wad/gfx/ranking.tga \
-   target/gfx
+   target/gfx/
 
 mkdir -p crosshair
 unzip -q -d crosshair ../dist/crosshair-deurk.zip
@@ -507,10 +507,10 @@ mv deurk-hud/deurk-HUD/qw/textures/wad/inv_shotgun.tga \
    deurk-hud/deurk-HUD/qw/textures/wad/sb_invuln.png \
    deurk-hud/deurk-HUD/qw/textures/wad/sb_invis.png \
    deurk-hud/deurk-HUD/qw/textures/wad/sb_suit.png \
-   target/textures/wad/
+   target/gfx/
 
 unzip -q ../dist/ammo-count-icons.zip
-mv Ibar.png target/textures/wad/ibar.png
+mv Ibar.png target/gfx/ibar.png
 
 mkdir -p faithful-hud-face
 unzip -q -d faithful-hud-face ../dist/faithful-hud-face.zip
@@ -529,7 +529,7 @@ mv faithful-hud-face/border/wad/face_p1.png \
    faithful-hud-face/border/wad/face_invul2.png \
    faithful-hud-face/border/wad/face_invis.png \
    faithful-hud-face/border/wad/face_inv2.png \
-   target/textures/wad/
+   target/gfx/
 
 mkdir -p faithful-hud-ammo
 unzip -q -d faithful-hud-ammo ../dist/faithful-hud-ammo.zip
@@ -537,14 +537,14 @@ mv faithful-hud-ammo/textures/wad/sb_rocket.png \
    faithful-hud-ammo/textures/wad/sb_shells.png \
    faithful-hud-ammo/textures/wad/sb_nails.png \
    faithful-hud-ammo/textures/wad/sb_cells.png \
-   target/textures/wad/
+   target/gfx/
 
 mkdir -p faithful-hud-armors
 unzip -q -d faithful-hud-armors ../dist/faithful-hud-armors.zip
 mv faithful-hud-armors/wad/sb_armor1.png \
    faithful-hud-armors/wad/sb_armor2.png \
    faithful-hud-armors/wad/sb_armor3.png \
-   target/textures/wad/
+   target/gfx/
 
 mkdir -p faithful-mdl-armors
 unzip -q -d faithful-mdl-armors ../dist/faithful-mdl-armors.zip
@@ -676,9 +676,9 @@ mkdir -p font
 unzip -q -d font ../dist/graybugs.zip
 
 mkdir -p target/textures/charsets
-convert font/graybugs/quake/qw/textures/charsets/graybugs.png\
+magick convert font/graybugs/quake/qw/textures/charsets/graybugs.png\
         -interpolate nearest-neighbor \
-        -interpolative-resize 200% \
+        -sample '200%' \
         target/textures/charsets/graybugs.png
 
 #mkdir -p plague
@@ -693,10 +693,11 @@ while read image; do
     rm "${image}"
 done< <(find target -name '*.tga')
 
-while read image; do
-    pngquant --speed 1 --map "${image}" "${image}"
-    mv "${image/.png/-fs8.png}" "${image}"
-done< <(find target -name '*.png')
+#while read image; do
+#    pngquant --speed 1 "${image}"
+#    mv "${image/.png/-fs8.png}" "${image}"
+#    magick convert "${image}" -depth 8 "${image}"
+#done< <(find target -name '*.png')
 
 cd target
 
