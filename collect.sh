@@ -628,43 +628,40 @@ mv ezepov-bmodels/pak/textures/bmodels/+0_med100.tga \
    target/textures/bmodels/
 
 
-# Not supported for demos yet in FTE
-# mkdir -p vwep
-# unzip -q -d vwep ../dist/vwep.zip
-# unzip -q -d vwep ../dist/vwep-player.zip
-#
-# mv vwep/qw/textures/models/w_rock_0.png \
-#    target/textures/models/w_rock.mdl_0.png
-#
-# mv vwep/qw/textures/models/w_shot2_0.png \
-#    target/textures/models/w_shot2.mdl_0.png
-#
-# mv vwep/qw/textures/models/w_light_0.png \
-#    target/textures/models/w_light.mdl_0.png
-#
-# mv vwep/qw/textures/models/w_shot_0.png \
-#    target/textures/models/w_shot.mdl_0.png
-#
-# mv vwep/qw/textures/models/w_rock2_0.png \
-#    target/textures/models/w_rock2.mdl_0.png
-#
-# mv vwep/qw/textures/models/w_nail2_0.png \
-#    target/textures/models/w_nail2.mdl_0.png
-#
-# mv vwep/qw/textures/models/w_nail_0.png \
-#    target/textures/models/w_nail.mdl_0.png
-#
-# mv vwep/qw/progs/w_shot.mdl \
-#    vwep/qw/progs/w_shot2.mdl \
-#    vwep/qw/progs/w_nail.mdl \
-#    vwep/qw/progs/w_nail2.mdl \
-#    vwep/qw/progs/w_rock.mdl \
-#    vwep/qw/progs/w_rock2.mdl \
-#    vwep/qw/progs/w_light.mdl \
-#    vwep/vwplayer.mdl \
-#    target/progs/
-#
-# mv target/progs/vwplayer.mdl target/progs/player.mdl
+mkdir -p vwep
+unzip -q -d vwep ../dist/vwep.zip
+unzip -q -d vwep ../dist/vwep-player.zip
+
+mv vwep/qw/textures/models/w_rock_0.png \
+   target/textures/models/w_rock.mdl_0.png
+
+mv vwep/qw/textures/models/w_shot2_0.png \
+   target/textures/models/w_shot2.mdl_0.png
+
+mv vwep/qw/textures/models/w_light_0.png \
+   target/textures/models/w_light.mdl_0.png
+
+mv vwep/qw/textures/models/w_shot_0.png \
+   target/textures/models/w_shot.mdl_0.png
+
+mv vwep/qw/textures/models/w_rock2_0.png \
+   target/textures/models/w_rock2.mdl_0.png
+
+mv vwep/qw/textures/models/w_nail2_0.png \
+   target/textures/models/w_nail2.mdl_0.png
+
+mv vwep/qw/textures/models/w_nail_0.png \
+   target/textures/models/w_nail.mdl_0.png
+
+mv vwep/qw/progs/w_shot.mdl \
+   vwep/qw/progs/w_shot2.mdl \
+   vwep/qw/progs/w_nail.mdl \
+   vwep/qw/progs/w_nail2.mdl \
+   vwep/qw/progs/w_rock.mdl \
+   vwep/qw/progs/w_rock2.mdl \
+   vwep/qw/progs/w_light.mdl \
+   vwep/vwplayer.mdl \
+   target/progs/
 
 mkdir -p megasound
 unzip -q -d megasound ../dist/megasound.zip r_item2_wav_us.zip
